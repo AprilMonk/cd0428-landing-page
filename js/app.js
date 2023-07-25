@@ -39,8 +39,11 @@
 */
 
 // build the nav
-
-
+const sections = document.querySelectorAll('section');
+sections.forEach(e => {
+    const section = e.target;
+    Element.mouseover = (e) => { }
+});
 // Add class 'active' to section when near top of viewport
 
 
@@ -50,10 +53,10 @@
 /**
  * End Main Functions
  * Begin Events
- * 
+ *
 */
 
-// Build menu 
+// Build menu
 
 // Scroll to section on link click
 
