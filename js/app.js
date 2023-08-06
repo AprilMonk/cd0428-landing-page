@@ -39,11 +39,25 @@
 */
 
 // build the nav
-const sections = document.querySelectorAll('section');
-sections.forEach(e => {
-    const section = e.target;
-    Element.mouseover = (e) => { }
-});
+const sectionsCollection = document.getElementsByTagName('section');
+/**
+ * getElementsByTagName() returns an HTMLCollection, not an array.
+ * We want to do some fancy array manipulation, so we use the spread operator
+ * to make a new variable that is, in fact, an array. Then we can use map().
+ */
+let sections = [...sectionsCollection];
+let navbar = document.getElementById("navbar__list");
+const navbarFragment = document.createDocumentFragment();
+
+for (let section of sections) {
+    const navbarItem = document.createElement('li');
+    navbarItem.textContent = section.dataset.nav;
+    navbarItem.classList.add('menu__link');
+    navbarItem.dataset.linkToSectionById = section.id;
+    navbarFragment.appendChild(navbarItem);
+}
+
+navbar.appendChild(navbarFragment);
 // Add class 'active' to section when near top of viewport
 
 

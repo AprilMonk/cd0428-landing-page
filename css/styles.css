@@ -88,44 +88,6 @@ section {
     transition: ease 0.3s all;
 }
 
-.hamburger {
-    position: relative;
-    display: block;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-}
-
-.hamburger .bar,
-.hamburger:after,
-.hamburger:before {
-    content: "";
-    display: block;
-    height: 5px;
-    background-color: lightblue;
-    margin: 6px 0px;
-    transition: 0.4s;
-    padding-right: 10em;
-
-}
-
-.hamburger.is-active,
-.hamburger:before {
-    transform: rotate(50deg) translate(12px, -6px);
-}
-
-.hamburger.is-active,
-.hamburger:after {
-    transform: rotate(-50deg) translate(20px, -3px);
-}
-
-.hamburger.is-active .bar {
-    opacity: 0;
-}
 
 /* Header Styles */
 .page__header {
